@@ -17,7 +17,12 @@ export default function BusinessListCard({ business }) {
         flexDirection: "row",
         gap: 10,
       }}
-      onPress={() => router.push("/businessdetail/" + business.id)}
+      // onPress={() => router.push("/businessdetail/" + business.id)}
+      onPress={() => {
+        console.log("Navigating to:", "/businessdetail/" + business.id);
+        router.push("/businessdetail/" + business.id);
+      }}
+      
     >
       <Image
         source={{ uri: business.imageUrl }}
